@@ -1,0 +1,34 @@
+.pixel-card {
+  border-radius: var(--pixel-radius-lg);
+  background: var(--pixel-bg-panel);
+}
+
+.pixel-card--elevated {
+  box-shadow: var(--pixel-shadow-md);
+}
+
+.pixel-card--outlined {
+  border: 1px solid var(--pixel-border);
+  box-shadow: none;
+}
+
+.pixel-card--filled {
+  background: var(--pixel-bg-elevated);
+  box-shadow: none;
+}
+
+.pixel-card--p-none {
+  padding: 0;
+}
+
+.pixel-card--p-sm {
+  padding: var(--pixel-space-md);
+}
+
+.pixel-card--p-md {
+  padding: var(--pixel-space-lg);
+}
+
+.pixel-card--p-lg {
+  padding: var(--pixel-space-xl);
+}
