@@ -2,7 +2,7 @@
 
 A modern React component library with a dark navy theme and TypeScript support.
 
-**[📖 Storybook Documentation](http://localhost:6006)**
+**[📖 Live Documentation](https://pixelui-docs.netlify.app)** *(Deploy to get your link)*
 
 ![React](https://img.shields.io/badge/React-18-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Storybook](https://img.shields.io/badge/Storybook-10-purple)
 
@@ -13,9 +13,9 @@ A modern React component library with a dark navy theme and TypeScript support.
 - 🎨 Dark navy + blue accent theme
 - 📦 6 core components
 - 🔤 Full TypeScript support
-- ♿ WCAG accessibility
-- 🌗 Dark/Light theme support
-- 📚 Storybook documentation
+- ♿ WCAG accessibility (a11y addon)
+- 🌗 Dark/Light theme via CSS variables
+- 📚 Auto-generated Storybook docs
 
 ---
 
@@ -23,26 +23,46 @@ A modern React component library with a dark navy theme and TypeScript support.
 
 | Component | Description |
 |-----------|-------------|
-| **Button** | Primary, secondary, ghost, danger variants |
+| **Button** | primary, secondary, ghost, danger variants |
 | **Input** | Text input with label, error, icons |
 | **Switch** | Toggle switch with sizes |
-| **Card** | Container with elevated, outlined, filled styles |
+| **Card** | Container: elevated, outlined, filled |
 | **Modal** | Dialog with animations, keyboard support |
-| **Alert** | Info, success, warning, error notifications |
+| **Alert** | info, success, warning, error states |
 
 ---
 
 ## 🚀 Getting Started
 
 ```bash
-# Install dependencies
+# Clone
+git clone https://github.com/YOUR_USERNAME/pixelui.git
+cd pixelui
+
+# Install
 npm install
 
-# Run Storybook
+# Run Storybook locally
 npm run storybook
 
-# Build library
-npm run build
+# Build Storybook for deployment
+npm run build-storybook
+```
+
+---
+
+## 🌐 Deploy to Netlify
+
+1. Push code to GitHub
+2. Connect repo to Netlify
+3. Auto-detects `netlify.toml`:
+   - **Build**: `npm run build-storybook`
+   - **Publish**: `storybook-static`
+
+Or use CLI:
+```bash
+npm run build-storybook
+npx netlify deploy --prod --dir=storybook-static
 ```
 
 ---
@@ -50,7 +70,8 @@ npm run build
 ## 📖 Usage
 
 ```tsx
-import { Button, Input, Modal } from '@pixelui/core';
+import { Button, Input, Modal } from './components';
+import './styles/tokens.css';
 
 function App() {
   return (
@@ -66,7 +87,7 @@ function App() {
 
 ## 🎨 Theming
 
-PixelUI uses CSS custom properties for theming:
+CSS custom properties for easy theming:
 
 ```css
 :root {
@@ -81,6 +102,24 @@ PixelUI uses CSS custom properties for theming:
   --pixel-bg-dark: #f5f5f5;
   --pixel-text: #171717;
 }
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Button/      # Button.tsx, Button.css, Button.stories.tsx
+│   ├── Input/
+│   ├── Switch/
+│   ├── Card/
+│   ├── Modal/
+│   └── Alert/
+├── styles/
+│   └── tokens.css   # Design tokens (colors, spacing, etc.)
+└── index.ts         # Main exports
 ```
 
 ---

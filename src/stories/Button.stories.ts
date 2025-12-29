@@ -52,3 +52,17 @@ export const Small: Story = {
     label: 'Button',
   },
 };
+
+export const Test: Story = {
+  args: {
+    primary: false,
+    label: "Button"
+  }
+};
+
+export const T1: Story = {
+  args: {
+    primary: false,
+    label: "Button"
+  }
+};
