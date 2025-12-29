@@ -1,0 +1,83 @@
+/* PixelUI Design System - Global Tokens */
+
+:root {
+  /* Colors - Dark Navy + Blue Theme */
+  --pixel-bg-dark: #0f0f23;
+  --pixel-bg-panel: #1a1a3e;
+  --pixel-bg-elevated: #252552;
+  --pixel-bg-hover: #2d2d6a;
+
+  --pixel-primary: #3b82f6;
+  --pixel-primary-hover: #2563eb;
+  --pixel-primary-light: rgba(59, 130, 246, 0.15);
+
+  --pixel-text: #e5e5f0;
+  --pixel-text-muted: #9494b8;
+  --pixel-text-dim: #6b6b8a;
+
+  --pixel-border: #3a3a5c;
+  --pixel-border-light: #4a4a7a;
+
+  --pixel-success: #22c55e;
+  --pixel-warning: #f59e0b;
+  --pixel-error: #ef4444;
+  --pixel-info: #3b82f6;
+
+  /* Spacing */
+  --pixel-space-xs: 4px;
+  --pixel-space-sm: 8px;
+  --pixel-space-md: 12px;
+  --pixel-space-lg: 16px;
+  --pixel-space-xl: 24px;
+  --pixel-space-2xl: 32px;
+
+  /* Border Radius */
+  --pixel-radius-sm: 4px;
+  --pixel-radius-md: 6px;
+  --pixel-radius-lg: 8px;
+  --pixel-radius-full: 9999px;
+
+  /* Typography */
+  --pixel-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --pixel-font-mono: 'SF Mono', 'Fira Code', monospace;
+
+  /* Shadows */
+  --pixel-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --pixel-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --pixel-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Light theme override */
+[data-theme='light'] {
+  --pixel-bg-dark: #f5f5f5;
+  --pixel-bg-panel: #ffffff;
+  --pixel-bg-elevated: #fafafa;
+  --pixel-bg-hover: #e5e5e5;
+
+  --pixel-text: #171717;
+  --pixel-text-muted: #525252;
+  --pixel-text-dim: #737373;
+
+  --pixel-border: #d4d4d4;
+  --pixel-border-light: #e5e5e5;
+
+  --pixel-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --pixel-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --pixel-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--pixel-font);
+  font-size: 14px;
+  color: var(--pixel-text);
+  background: var(--pixel-bg-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}

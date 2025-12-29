@@ -1,0 +1,114 @@
+.pixel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pixel-space-sm);
+  font-family: var(--pixel-font);
+  font-weight: 500;
+  border: none;
+  border-radius: var(--pixel-radius-md);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+  position: relative;
+}
+
+.pixel-btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--pixel-bg-dark), 0 0 0 4px var(--pixel-primary);
+}
+
+.pixel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.pixel-btn--sm {
+  height: 32px;
+  padding: 0 var(--pixel-space-md);
+  font-size: 12px;
+}
+
+.pixel-btn--md {
+  height: 40px;
+  padding: 0 var(--pixel-space-lg);
+  font-size: 14px;
+}
+
+.pixel-btn--lg {
+  height: 48px;
+  padding: 0 var(--pixel-space-xl);
+  font-size: 16px;
+}
+
+/* Variants */
+.pixel-btn--primary {
+  background: var(--pixel-primary);
+  color: white;
+}
+
+.pixel-btn--primary:hover:not(:disabled) {
+  background: var(--pixel-primary-hover);
+}
+
+.pixel-btn--secondary {
+  background: var(--pixel-bg-elevated);
+  color: var(--pixel-text);
+  border: 1px solid var(--pixel-border);
+}
+
+.pixel-btn--secondary:hover:not(:disabled) {
+  background: var(--pixel-bg-hover);
+  border-color: var(--pixel-border-light);
+}
+
+.pixel-btn--ghost {
+  background: transparent;
+  color: var(--pixel-text);
+}
+
+.pixel-btn--ghost:hover:not(:disabled) {
+  background: var(--pixel-primary-light);
+  color: var(--pixel-primary);
+}
+
+.pixel-btn--danger {
+  background: var(--pixel-error);
+  color: white;
+}
+
+.pixel-btn--danger:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+/* Full Width */
+.pixel-btn--full {
+  width: 100%;
+}
+
+/* Loading */
+.pixel-btn--loading .pixel-btn__text {
+  opacity: 0.7;
+}
+
+.pixel-btn__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: pixel-spin 0.6s linear infinite;
+}
+
+@keyframes pixel-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Icons */
+.pixel-btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
