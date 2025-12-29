@@ -1,73 +1,90 @@
-# React + TypeScript + Vite
+# 🦉 PixelUI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React component library with a dark navy theme and TypeScript support.
 
-Currently, two official plugins are available:
+**[📖 Storybook Documentation](http://localhost:6006)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![React](https://img.shields.io/badge/React-18-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Storybook](https://img.shields.io/badge/Storybook-10-purple)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🎨 Dark navy + blue accent theme
+- 📦 6 core components
+- 🔤 Full TypeScript support
+- ♿ WCAG accessibility
+- 🌗 Dark/Light theme support
+- 📚 Storybook documentation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Components
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Component | Description |
+|-----------|-------------|
+| **Button** | Primary, secondary, ghost, danger variants |
+| **Input** | Text input with label, error, icons |
+| **Switch** | Toggle switch with sizes |
+| **Card** | Container with elevated, outlined, filled styles |
+| **Modal** | Dialog with animations, keyboard support |
+| **Alert** | Info, success, warning, error notifications |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run Storybook
+npm run storybook
+
+# Build library
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📖 Usage
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```tsx
+import { Button, Input, Modal } from '@pixelui/core';
+
+function App() {
+  return (
+    <div>
+      <Button variant="primary">Click Me</Button>
+      <Input label="Email" placeholder="you@example.com" />
+    </div>
+  );
+}
 ```
+
+---
+
+## 🎨 Theming
+
+PixelUI uses CSS custom properties for theming:
+
+```css
+:root {
+  --pixel-primary: #3b82f6;
+  --pixel-bg-dark: #0f0f23;
+  --pixel-bg-panel: #1a1a3e;
+  --pixel-text: #e5e5f0;
+}
+
+/* Light mode */
+[data-theme="light"] {
+  --pixel-bg-dark: #f5f5f5;
+  --pixel-text: #171717;
+}
+```
+
+---
+
+## 📄 License
+
+MIT
